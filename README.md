@@ -1,9 +1,20 @@
-:atom_symbol: :brazil:
-
 # Table of Contents
 
-1. [Keeper App Project - Part 1 Challenge]()</br>
-1.1 [Keeper App Project - Part 1 Challenge Final Code]()</br>
+1. [Create a React App in Your Local Environment]()</br>
+2. [Keeper App Project - Part 1 Challenge]()</br>
+2.1 [Keeper App Project - Part 1 Challenge Final Code]()</br>
+
+***
+
+# [Create a React App in Your Local Environment](https://reactjs.org/docs/create-a-new-react-app.html)
+
+It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have `Node >= 10.16 and npm >= 5.6` on your machine. To create a project, run:
+
+```js
+npx create-react-app my-app
+cd my-app
+npm start
+```
 
 ***
 
@@ -11,17 +22,18 @@
 
 :hourglass_flowing_sand: :jigsaw: :question:
 
-- 1. Create a new React app.
-- 2. Create a App.jsx component.
-- 3. Create a Header.jsx component that renders a `<header>` element to show the Keeper App name in an `<h1>`.
-- 4. Create a Footer.jsx component that renders a `<footer>` element to show a copyright message in a `<p>` with a dynamically updated year.
-- 5. Create a Note.jsx component to show a `<div>` element with a `<h1>` for a title and a `<p>` for the content.
-- 6. Make sure that the final website is styled like the example shown [here](https://l1pp6.csb.app/)
-- **HINT: You will need to study the classes in the `styles.css` file to appy styling.**
+1. Create a new React app.
+2. Create a App.jsx component.
+3. Create a Header.jsx component that renders a `<header>` element to show the Keeper App name in an `<h1>`.
+4. Create a Footer.jsx component that renders a `<footer>` element to show a copyright message in a `<p>` with a dynamically updated year.
+5. Create a Note.jsx component to show a `<div>` element with a `<h1>` for a title and a `<p>` for the content.
+6. Make sure that the final website is styled like the example shown [here](https://l1pp6.csb.app/)
+**HINT: You will need to study the classes in the `styles.css` file to appy styling.**
 
 ## Keeper App Project - Part 1 Challenge Final Code
 
-:computer: :gear: **index.html**
+:computer: :gear: :heavy_check_mark: **index.html**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +52,7 @@
 </html>
 ```
 
-:computer: :gear: **index.js**
+:computer: :gear: :heavy_check_mark: **index.js**
 
 ```js
 import React from "react";
@@ -55,7 +67,7 @@ document.getElementById("root")
 );
 ```
 
-:computer: :gear: **App.jsx**
+:computer: :gear: :heavy_check_mark: **App.jsx**
 
 ```js
 /*
@@ -91,7 +103,7 @@ we want to use it as a component (inside a HTML tag...)
 export default App;
 ```
 
-:computer: :gear: **Header.jsx**
+:computer: :gear: :heavy_check_mark: **Header.jsx**
 
 ```js
 /*
@@ -118,7 +130,7 @@ we want to use it as a component (inside a HTML tag...)
 export default Header;
 ```
 
-:computer: :gear: **Footer.jsx**
+:computer: :gear: :heavy_check_mark: **Footer.jsx**
 
 ```js
 /*
@@ -150,7 +162,7 @@ we want to use it as a component (inside a HTML tag...)
 export default Footer;
 ```
 
-:computer: :gear: **Note.jsx**
+:computer: :gear: :heavy_check_mark: **Note.jsx**
 
 ```js
 /*
@@ -181,22 +193,10 @@ export default Note;
 ```
 
 
-***
-
-https://reactjs.org/docs/create-a-new-react-app.html
-
-Create a Local Environment React App
-
-```js
-npx create-react-app my-app
-cd my-app
-
-npm install??????????????????????
-
-npm start
-```
 
 ***
+
+</br></br></br></br></br>
 
 # Getting Started with Create React App
 
