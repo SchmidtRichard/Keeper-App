@@ -196,7 +196,7 @@ export default Note;
 
 ***
 
-</br></br></br></br></br>
+</br></br></br></br></br></br>
 
 # Getting Started with Create React App
 
