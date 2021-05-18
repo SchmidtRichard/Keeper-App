@@ -16,7 +16,4 @@ import ReactDom from "react-dom";
 //ES6 feature to import React components
 import App from "./components/App.jsx";
 
-ReactDom.render(
-<App />,
-document.getElementById("root")
-);
+ReactDom.render(<App />, document.getElementById("root"));

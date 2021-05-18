@@ -1,10 +1,12 @@
 # Table of Contents
 
-1. [Create a React App in Your Local Environment]()</br>
-2. [Keeper App Project - Part 1 Challenge]()</br>
-2.1 [Keeper App Project - Part 1 Challenge Final Code]()</br>
+1. [Create a React App in Your Local Environment](https://github.com/SchmidtRichard/Keeper-App#create-a-react-app-in-your-local-environment)</br>
+2. [Keeper App Project - Part 1 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge)</br>
+2.1 [Keeper App Project - Part 1 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge-final-code)</br>
+
 
 ***
+
 
 # [Create a React App in Your Local Environment](https://reactjs.org/docs/create-a-new-react-app.html)
 
@@ -16,11 +18,13 @@ cd my-app
 npm start
 ```
 
+Then open up the project folder and delete everything that is not needed, only leave: `public/index.html`, `src/index.js`, `node_modules`, `.gitignore`, `package-lock.json`, `package.json`, and `README.md`.
+
 ***
 
 # Keeper App Project - Part 1 Challenge
 
-:hourglass_flowing_sand: :jigsaw: :question:
+:hourglass_flowing_sand: :jigsaw: :question: Below are the steps for **part 1 challenge**:
 
 1. Create a new React app.
 2. Create a App.jsx component.
