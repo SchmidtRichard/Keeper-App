@@ -11,12 +11,20 @@ import React from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import Note from "./Note.jsx";
+import notes from "../notes.js";
+
+console.log(notes);
 
 function App() {
 	return (
 		<div>
 			<Header />
-			<Note />
+
+			{notes.map((newNote) => (
+				//Return a Note component that has some props being sent over
+				<Note key={newNote.key} noteTitle={newNote.title} noteContent={newNote.content} />
+			))}
+
 			<Footer />
 		</div>
 	);
@@ -25,7 +33,7 @@ function App() {
 /*
 ES6 feature to export React components
 we don't use parentheses (export default App();)
-because it would make it return immediatelly, instead
+because it would make it return immediately, instead
 we want to use it as a component (inside a HTML tag...)
 */
 export default App;
