@@ -312,7 +312,7 @@ we want to use it as a component (inside a HTML tag...)
 export default Note;
 ```
 
-
+***
 
 
 
