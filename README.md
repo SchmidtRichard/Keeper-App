@@ -6,7 +6,7 @@
 3.  [Keeper App Project - Part 2 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge)</br>
     3.1 [Keeper App Project - Part 2 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge-final-code)</br>
 4.  [Keeper App Project - Part 3 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge)</br>
-5.  [Keeper App Project - Part 3 Challenge Final Code](<>)</br>
+    4.1 [Keeper App Project - Part 3 Challenge Final Code](<>)</br>
 
 * * *
 
@@ -319,7 +319,7 @@ export default Note;
 
 :hourglass_flowing_sand: :jigsaw: :question: Below are the steps for **part 3 challenge**:
 
-CHALLENGE:
+### CHALLENGE:
 
 1.  Implement the add note functionality.
     Create a constant that keeps track of the title and content.
@@ -332,7 +332,7 @@ CHALLENGE:
     Use the filter function to filter out the item that needs deletion.
     Pass a id over to the Note component, pass it back to the App when deleting.
 
-[This is the end result you're aiming for].(<https://pogqj.csb.app/>)
+[This is the end result you're aiming for.](https://pogqj.csb.app/)
 
 ```js
 import React from "react";
@@ -340,6 +340,26 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+**CreateArea.jsx**
+
+```js
+import React from "react";
+
+function CreateArea() {
+  return (
+    <div>
+      <form>
+        <input name="title" placeholder="Title" />
+        <textarea name="content" placeholder="Take a note..." rows="3" />
+        <button>Add</button>
+      </form>
+    </div>
+  );
+}
+
+export default CreateArea;
 ```
 
 ## Keeper App Project - Part 3 Challenge Final Code
@@ -350,7 +370,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
