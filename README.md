@@ -1,13 +1,14 @@
 # Table of Contents
 
-1. [Create a React App in Your Local Environment](https://github.com/SchmidtRichard/Keeper-App#create-a-react-app-in-your-local-environment)</br>
-2. [Keeper App Project - Part 1 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge)</br>
+1.  [Create a React App in Your Local Environment](https://github.com/SchmidtRichard/Keeper-App#create-a-react-app-in-your-local-environment)</br>
+2.  [Keeper App Project - Part 1 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge)</br>
     2.1 [Keeper App Project - Part 1 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge-final-code)</br>
-3. [Keeper App Project - Part 2 Challenge]()</br>
-   3.1 [Keeper App Project - Part 2 Challenge Final Code]()</br>
+3.  [Keeper App Project - Part 2 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge)</br>
+    3.1 [Keeper App Project - Part 2 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge-final-code)</br>
+4.  [Keeper App Project - Part 3 Challenge](<>)</br>
+5.  [Keeper App Project - Part 3 Challenge Final Code](<>)</br>
 
-***
-
+* * *
 
 # [Create a React App in Your Local Environment](https://reactjs.org/docs/create-a-new-react-app.html)
 
@@ -21,19 +22,19 @@ npm start
 
 Then open up the project folder and delete everything that is not needed, only leave: `public/index.html`, `src/index.js`, `node_modules`, `.gitignore`, `package-lock.json`, `package.json`, and `README.md`.
 
-***
+* * *
 
 # Keeper App Project - Part 1 Challenge
 
 :hourglass_flowing_sand: :jigsaw: :question: Below are the steps for **part 1 challenge**:
 
-1. Create a new React app.
-2. Create a App.jsx component.
-3. Create a Header.jsx component that renders a `<header>` element to show the Keeper App name in an `<h1>`.
-4. Create a Footer.jsx component that renders a `<footer>` element to show a copyright message in a `<p>` with a dynamically updated year.
-5. Create a Note.jsx component to show a `<div>` element with a `<h1>` for a title and a `<p>` for the content.
-6. Make sure that the final website is styled like the example shown [here](https://l1pp6.csb.app/)
-**HINT: You will need to study the classes in the `styles.css` file to apply styling.**
+1.  Create a new React app.
+2.  Create a App.jsx component.
+3.  Create a Header.jsx component that renders a `<header>` element to show the Keeper App name in an `<h1>`.
+4.  Create a Footer.jsx component that renders a `<footer>` element to show a copyright message in a `<p>` with a dynamically updated year.
+5.  Create a Note.jsx component to show a `<div>` element with a `<h1>` for a title and a `<p>` for the content.
+6.  Make sure that the final website is styled like the example shown [here](https://l1pp6.csb.app/)
+    **HINT: You will need to study the classes in the `styles.css` file to apply styling.**
 
 ## Keeper App Project - Part 1 Challenge Final Code
 
@@ -148,7 +149,7 @@ JS using real JS functions such as document.createElement
 import React from "react";
 
 function Footer(){
-    
+
     const currentYear = new Date().getFullYear();
 
     return(
@@ -197,13 +198,13 @@ we want to use it as a component (inside a HTML tag...)
 export default Note;
 ```
 
-***
+* * *
 
 # Keeper App Project - Part 2 Challenge
 
 :hourglass_flowing_sand: :jigsaw: :question: Below are the steps for **part 2 challenge**:
 
-1. Render all the notes inside `notes.js` as a separate `Note component`.
+1.  Render all the notes inside `notes.js` as a separate `Note component`.
 
 Now we have the **notes.js** files containing all the notes we need to render:
 
@@ -312,16 +313,37 @@ we want to use it as a component (inside a HTML tag...)
 export default Note;
 ```
 
-***
+* * *
 
+# Keeper App Project - Part 3 Challenge
 
+:hourglass_flowing_sand: :jigsaw: :question: Below are the steps for **part 3 challenge**:
 
+CHALLENGE:
 
+1.  Implement the add note functionality.
+    Create a constant that keeps track of the title and content.
+    Pass the new note back to the App.
+    Add new note to an array.
+    Take array and render seperate Note components for each item.
 
+2.  Implement the delete note functionality.
+    Callback from the Note component to trigger a delete function.
+    Use the filter function to filter out the item that needs deletion.
+    Pass a id over to the Note component, pass it back to the App when deleting.
 
+//This is the end result you're aiming for:
+//<https://pogqj.csb.app/>
 
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
+ReactDOM.render(<App />, document.getElementById("root"));
+```
 
+* * *
 
 </br></br></br></br></br></br>
 
@@ -335,23 +357,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.\\
+Open <http://localhost:3000> to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.\\
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.\\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.\\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.\\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
@@ -374,24 +396,24 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/code-splitting>
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size>
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app>
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/advanced-configuration>
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/deployment>
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: <https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify>
