@@ -5,7 +5,7 @@
     2.1 [Keeper App Project - Part 1 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-1-challenge-final-code)</br>
 3.  [Keeper App Project - Part 2 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge)</br>
     3.1 [Keeper App Project - Part 2 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge-final-code)</br>
-4.  [Keeper App Project - Part 3 Challenge](<>)</br>
+4.  [Keeper App Project - Part 3 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge)</br>
 5.  [Keeper App Project - Part 3 Challenge Final Code](<>)</br>
 
 * * *
@@ -332,8 +332,7 @@ CHALLENGE:
     Use the filter function to filter out the item that needs deletion.
     Pass a id over to the Note component, pass it back to the App when deleting.
 
-//This is the end result you're aiming for:
-//<https://pogqj.csb.app/>
+[This is the end result you're aiming for].(<https://pogqj.csb.app/>)
 
 ```js
 import React from "react";
@@ -342,6 +341,8 @@ import App from "./components/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
+
+## Keeper App Project - Part 3 Challenge Final Code
 
 * * *
 
