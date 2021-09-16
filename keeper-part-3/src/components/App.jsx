@@ -77,7 +77,27 @@ function App() {
           onAdd={addNote}
           />
 
-      <Note key={1} title="Note title" content="Note content" />
+        {/*
+        1. Implement the add note functionality.
+        Take array and render separate Note components for each item.
+
+        Use the notes array and map through it to render a different note
+        component for each item inside the array
+
+        the map will take an arrow function, and for each of the noteItem 
+        inside the notes array, then return a new note component and
+        this note component will need some properties (title, content)
+        passed over
+
+        add curly braces around the code below for it to be recognized as JS code
+        */}
+        { notes.map((noteItem) => {
+        return <Note
+            title={noteItem.title}
+            content={noteItem.content}
+        />
+    })}
+
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@
     3.1 [Keeper App Project - Part 2 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge-final-code)</br>
 4.  [Keeper App Project - Part 3 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge)</br>
     4.1 [Keeper App Project - Part 3 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge-final-code)</br>
+    4.1.1 [Challenge Part 1 - Implement the add note functionality Code Completed](<>)</br>
 
 * * *
 
@@ -389,16 +390,135 @@ export default App;
 
 ## Keeper App Project - Part 3 Challenge Final Code
 
-### Challenge Steps Code
+### Challenge Part 1 - Implement the add note functionality Code Completed
 
-#### Challenge Part 1 - Create a constant that keeps track of the title and content.
+**App.jsx**
+
+```js
+import React, {useState} from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import Note from "./Note";
+import CreateArea from "./CreateArea";
+
+function App() {
+
+    /*
+    1. Implement the add note functionality.
+        In the app component - Add new note to an array.
+
+        The array will need state because it's going to be changed
+        the initial value for the notes will be an empty array
+     */
+    const [notes, setNotes] = useState([]);
+
+    /*
+    1. Implement the add note functionality.
+    Pass the new note back to the App component
+
+    Trigger a function (addNote) that can pass the note back
+    over to the App.jsx we have to pass in a function
+    as a prop to do that, it will receive a note object
+    and will do something with the object
+
+    the addNote will be added as a value to one of the
+    props for the CreateArea (onAdd) and we will
+    set it equal to addNote
+
+    the value of newNote comes from CreateArea.jsx from the
+    function submitNote(event)...
+    */
+    function addNote(newNote){
+        console.log(newNote);
+
+        /*
+    1. Implement the add note functionality.
+        In the app component - Add new note to an array.
+
+        add to the notes array
+        inside the setNotes function we can get hold of the
+        previous notes or whatever is the previous value of
+        the notes array
+     */
+        setNotes(prevNotes => {
+        /*
+        Use the spread operator to add to the notes arrays so
+        that we get hold of all of the previous notes and then
+        add the new note at the end
+
+        the value of newNote comes from CreateArea.jsx from the
+        function submitNote(event)...
+         */
+            return [...prevNotes, newNote];
+        });
+    }
+
+  return (
+    <div>
+      <Header />
+      <CreateArea
+
+          /*
+            1. Implement the add note functionality.
+            Pass the new note back to the App component
+
+            Trigger a function (addNote) that can pass the note back
+            over to the App.jsx we have to pass in a function
+            as a prop to do that, it will receive a note object
+            and will do something with the object
+
+            the addNote will be added as a value to one of the
+            props for the CreateArea (onAdd) and we will
+            set it equal to addNote
+            */
+          onAdd={addNote}
+          />
+
+        {/*
+        1. Implement the add note functionality.
+        Take array and render separate Note components for each item.
+
+        Use the notes array and map through it to render a different note
+        component for each item inside the array
+
+        the map will take an arrow function, and for each of the noteItem
+        inside the notes array, then return a new note component and
+        this note component will need some properties (title, content)
+        passed over
+
+        add curly braces around the code below for it to be recognized as JS code
+        */}
+        { notes.map((noteItem) => {
+        return <Note
+            title={noteItem.title}
+            content={noteItem.content}
+        />
+    })}
+
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+```
 
 **CreateArea.jsx**
 
 ```js
 import React, {useState} from "react";
 
-function CreateArea() {
+/*
+    1. Implement the add note functionality.
+    Pass the new note back to the App component
+
+    Now we'll trigger the addNote by getting hold
+    of the props that gets passed over and especially
+    the props.onAdd, and calling the onAdd from the props
+    is going to be equivalent to calling the addNote from App.jsx
+    and we need to pass it back as an input in order to be able to add the note
+ */
+function CreateArea(props) {
 
     /*
     1. Implement the add note functionality.
@@ -437,14 +557,32 @@ function CreateArea() {
         });
     }
 
-  return (
-    <div>
-      <form>
-        <input
-            /*
-            onChange - Now that we got the inputs controlled, the next step is to update them when they get changed
-            inside the onChange call a function (handleChange), and then we can pass it in as the onChange
-            */
+    /*
+    1. Implement the add note functionality.
+    Pass the new note back to the App component
+    */
+    function submitNote(event){
+        /*
+        event - Prevent the default behaviour (refresh page) of a button
+        inside a form when clicked by the user. The event is triggered by
+        the onClick and we can call event.preventDefault
+         */
+
+        props.onAdd(note);
+
+        event.preventDefault();
+
+    }
+
+return (
+<div>
+<form>
+<input
+  /*
+  onChange - Now that we got the inputs controlled, the next step is to update them when
+  they get changed inside the onChange call a function (handleChange), and then we can
+  pass it in as the onChange
+  */
             name="title"
             onChange={handleChange}
             value={note.title}
@@ -455,7 +593,16 @@ function CreateArea() {
             value={note.content}
             placeholder="Take a note..."
             rows="5" />
-        <button>Add</button>
+
+    {/*
+          1. Implement the add note functionality.
+          Pass the new note back to the App component
+
+          Get the note that's been created passed back to the App.jsx
+          When the button gets clicked we will pass a function (submitNote)
+          that should be triggered.
+    */}
+        <button onClick={submitNote}>Add</button>
       </form>
     </div>
   );
