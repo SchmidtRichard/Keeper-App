@@ -1,6 +1,16 @@
 import React, {useState} from "react";
 
-function CreateArea() {
+/*
+    1. Implement the add note functionality.
+    Pass the new note back to the App component
+
+    Now we'll trigger the addNote by getting hold
+    of the props that gets passed over and especially
+    the props.onAdd, and calling the onAdd from the props
+    is going to be equivalent to calling the addNote from App.jsx
+    and we need to pass it back as an input in order to be able to add the note
+ */
+function CreateArea(props) {
 
     /*
     1. Implement the add note functionality.
@@ -39,14 +49,32 @@ function CreateArea() {
         });
     }
 
-  return (
-    <div>
-      <form>
-        <input
-            /*
-            onChange - Now that we got the inputs controlled, the next step is to update them when they get changed
-            inside the onChange call a function (handleChange), and then we can pass it in as the onChange
-            */
+    /*
+    1. Implement the add note functionality.
+    Pass the new note back to the App component
+    */
+    function submitNote(event){
+        /*
+        event - Prevent the default behaviour (refresh page) of a button
+        inside a form when clicked by the user. The event is triggered by
+        the onClick and we can call event.preventDefault
+         */
+
+        props.onAdd(note);
+
+        event.preventDefault();
+
+    }
+
+return (
+<div>
+<form>
+<input
+  /*
+  onChange - Now that we got the inputs controlled, the next step is to update them when
+  they get changed inside the onChange call a function (handleChange), and then we can
+  pass it in as the onChange
+  */
             name="title"
             onChange={handleChange}
             value={note.title}
@@ -57,7 +85,16 @@ function CreateArea() {
             value={note.content}
             placeholder="Take a note..."
             rows="5" />
-        <button>Add</button>
+
+    {/*
+          1. Implement the add note functionality.
+          Pass the new note back to the App component
+
+          Get the note that's been created passed back to the App.jsx
+          When the button gets clicked we will pass a function (submitNote)
+          that should be triggered.
+    */}
+        <button onClick={submitNote}>Add</button>
       </form>
     </div>
   );
