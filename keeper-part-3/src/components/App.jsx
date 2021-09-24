@@ -56,6 +56,50 @@ function App() {
         });
     }
 
+    {/*
+        2. Implement the delete note functionality.
+        Callback from the Note component to trigger a delete function.
+
+        Get the delete button to trigger a function in the App.jsx
+        and we need the props to do it, inside the function we will
+        to trigger a function that gets passed over from the props that
+        will delete this note from the array
+
+        deleteNote function - we will need the id of the note
+        that needs to be deleted, then this function will be
+        passed over to each of these notes that gets rendered
+        on the below code - {notes.map(noteItem... - as a property
+        */}
+    function deleteNote(id){
+        console.log("Delete was triggered");
+
+        /*
+        Once we have access to all of the previous notes array
+        we can loop through it using the filter function
+         */
+        setNotes(prevNotes =>  {
+            /*
+            the filter function can take up to 3 arguments
+            1st - value that we are currently looping through in the array (noteItem)
+            2nd - the index of the noteItem
+             */
+            return prevNotes.filter((noteItem, index) => {
+                /*
+                return all of the notes where the index is not equal to the
+                id of the note that needs to be deleted
+
+                This way we should end up with an array that contains everything
+                in the prevNotes other than the ones where the index matches the id
+                of the note to be deleted
+
+                the last thing to do is to pass over the index of the note
+                that is being deleted through this deleteNote function
+                 */
+                return index !== id;
+            })
+        })
+    }
+
   return (
     <div>
       <Header />
@@ -91,10 +135,20 @@ function App() {
 
         add curly braces around the code below for it to be recognized as JS code
         */}
-        { notes.map((noteItem) => {
+        { notes.map((noteItem, index) => {
         return <Note
+
+            /*
+            2. Implement the delete note functionality.
+            Pass a id over to the Note component, pass it back to the App when deleting,
+            in order to identify the Note that needs to be removed from the array
+            */
+            key={index}
+            id={index}
             title={noteItem.title}
             content={noteItem.content}
+
+            onDelete={deleteNote}
         />
     })}
 

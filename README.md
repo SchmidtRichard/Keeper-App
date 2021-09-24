@@ -7,7 +7,7 @@
     3.1 [Keeper App Project - Part 2 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-2-challenge-final-code)</br>
 4.  [Keeper App Project - Part 3 Challenge](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge)</br>
     4.1 [Keeper App Project - Part 3 Challenge Final Code](https://github.com/SchmidtRichard/Keeper-App#keeper-app-project---part-3-challenge-final-code)</br>
-    4.1.1 [Challenge Part 1 - Implement the add note functionality Code Completed](<>)</br>
+    4.1.1 [Challenge Part 1 - Implement the add note functionality Code Completed](https://github.com/SchmidtRichard/Keeper-App#challenge-part-1---implement-the-add-note-functionality-code-completed)</br>
 
 * * *
 
