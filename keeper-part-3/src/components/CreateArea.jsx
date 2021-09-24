@@ -62,6 +62,16 @@ function CreateArea(props) {
 
         props.onAdd(note);
 
+        /*
+        Clear the Title and Take a Note fields by calling the setNote
+        and pass the same object that we had to begin
+        with (empty strings - title: "", content: "") it
+         */
+        setNote({
+            title: "",
+            content: ""
+        })
+
         event.preventDefault();
 
     }
